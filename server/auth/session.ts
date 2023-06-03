@@ -10,6 +10,28 @@ if (!process.env.SESSION_SECRET) {
   );
 }
 
+//double check that a MONGO_SECRET is set
+if (!process.env.MONGO_SECRET) {
+  console.warn(
+    "MONGO_SECRET environment variable not set, cannot operate securely!"
+  );
+}
+
+//database link
+import MongoStore from "connect-mongo";
+
+console.log("MONGO_URL", process.env.MONGO_URL);
+
+const sessionStore = MongoStore.create({
+  mongoUrl: process.env.MONGO_URL,
+  mongoOptions: {},
+  dbName: "qualitylife",
+  collectionName: "sessions",
+  crypto: {
+    secret: process.env.MONGO_SECRET || "SuperSecretMongoSecret",
+  },
+});
+
 export const sessionMiddleware = expressSession({
   cookie: {
     maxAge: oneDay,
@@ -20,6 +42,5 @@ export const sessionMiddleware = expressSession({
   resave: false,
   saveUninitialized: false,
   unset: "destroy",
+  store: sessionStore,
 });
-
-//TODO: add DB-based session store
