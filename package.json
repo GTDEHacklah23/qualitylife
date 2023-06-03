@@ -1,0 +1,53 @@
+{
+  "name": "qualitylife",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build-css": "npx sass --no-source-map web/scss/index.scss web/assets/bundle.css",
+    "build-tsc": "npx tsc",
+    "build-pack": "npx webpack --config webpack.config.js",
+    "build": "npm run build-css && npm run build-tsc && npm run build-pack",
+    "build-dev": "npm run build-css && npm run build-pack",
+    "start": "node dist/index.js",
+    "dev": "npm run build-dev && node dist/index.js",
+    "watch": "npx nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GTDEHacklah23/qualitylife.git"
+  },
+  "author": "piman51277",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GTDEHacklah23/qualitylife/issues"
+  },
+  "homepage": "https://github.com/GTDEHacklah23/qualitylife#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.2.5",
+    "@types/nunjucks": "^3.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint": "^8.41.0",
+    "nodemon": "^2.0.22",
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.0.4",
+    "webpack": "^5.85.0",
+    "webpack-cli": "^5.1.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.1.3",
+    "express": "^4.18.2",
+    "nunjucks": "^3.2.4",
+    "sass": "^1.62.1"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "web"
+    ],
+    "ext": "ts,njk,scss",
+    "exec": "npm run dev",
+    "delay": 3000
+  }
+}

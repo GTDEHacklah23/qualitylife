@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "lib": ["es2018"],
+    "strict": true,
+    "declaration": true,
+    "outDir": "dist",
+    "sourceMap": false,
+    "esModuleInterop": true
+  },
+  "include": ["server/"],
+  "exclude": ["node_modules"]
+}

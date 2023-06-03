@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "steoates.autoimport",
+    "mgmcdermott.vscode-language-babel",
+    "ginfuru.better-nunjucks",
+    "mikestead.dotenv",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "github.vscode-pull-request-github",
+    "euskadi31.json-pretty-printer",
+    "zainchen.json",
+    "esbenp.prettier-vscode"
+  ]
+}

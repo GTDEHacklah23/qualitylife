@@ -1,0 +1,10 @@
+node_modules
+cert
+
+dist
+
+prod.env
+dev.env
+
+web/assets/bundle.css
+web/assets/bundle.js
