@@ -14,3 +14,6 @@ app.get("/", (req, res) => {
 app.get("/signup", (req, res) => {
   res.render("signup.njk");
 });
+app.get("/login", (req, res) => {
+  res.render("login.njk");
+});
