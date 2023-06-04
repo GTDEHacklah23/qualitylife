@@ -4,6 +4,7 @@ import { lookup } from "zipcodes";
 import { validTags } from "../../util/tags";
 import { v4 as uuidv4 } from "uuid";
 import { EventEntry } from "../../schema/Event";
+import { EventRoster } from "../../schema/EventRoster";
 
 const schema = Joi.object({
   image: Joi.string().required(),
@@ -74,6 +75,19 @@ export default handler(schema, async (req, res, parsed) => {
 
   try {
     await newEvent.save();
+  } catch (err) {
+    res.status(500).json({ error: "500 - Internal Server Error" });
+    return;
+  }
+
+  //create the event roster
+  const newEventRoster = new EventRoster({
+    id: newEvent.id,
+    attendees: [],
+  });
+
+  try {
+    await newEventRoster.save();
   } catch (err) {
     res.status(500).json({ error: "500 - Internal Server Error" });
     return;
