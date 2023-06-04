@@ -10,3 +10,7 @@ app.use("/api", apiRouter);
 app.get("/", (req, res) => {
   res.render("index.njk");
 });
+
+app.get("/signup", (req, res) => {
+  res.render("signup.njk");
+});
