@@ -45,7 +45,7 @@ export async function getLeaderboard(): Promise<SanitizedUser[]> {
 }
 
 export default handler(schema, async (req, res) => {
-  getLeaderboard();
+  await getLeaderboard();
 
   //check if we have a username in the session
   const username = req.session!.username;
