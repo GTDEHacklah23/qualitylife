@@ -10,4 +10,7 @@ router.post("/update", updateHandler);
 import joinHandler from "./join";
 router.post("/join", joinHandler);
 
+import leaveHandler from "./leave";
+router.post("/leave", leaveHandler);
+
 export default router;
