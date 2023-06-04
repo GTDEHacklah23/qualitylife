@@ -7,7 +7,9 @@ Create a new account
 ```json
 {
   "username": "string",
-  "password": "string"
+  "password": "string",
+  "email": "string",
+  "zipCode": "number"
 }
 ```
 
@@ -27,6 +29,16 @@ Create a new account
   - max 30 characters
   - 2+ letters
   - 2+ digits or symbols
+
+- `email` must be:
+
+  - a string
+  - valid email address
+
+- `zipCode` must be:
+
+  - a number
+  - 5 digits
 
 ## Response
 
@@ -52,7 +64,7 @@ Username already exists
 
 ### 400 Bad Request
 
-Invalid parameters
+Invalid parameters or unknown ZIP
 
 ```json
 {
