@@ -3,6 +3,7 @@ import { handler } from "../handler";
 import { EventEntry } from "../../schema/Event";
 import { EventRoster } from "../../schema/EventRoster";
 import { UserEvents } from "../../schema/UserEvents";
+import { UserProfile } from "../../schema/UserProfile";
 
 const schema = Joi.object({
   id: Joi.string().required(),
@@ -44,6 +45,20 @@ export default handler(schema, async (req, res, parsed) => {
     await UserEvents.updateOne(
       { username },
       { $push: { joined: { id, time: Date.now() } } }
+    );
+  } catch (e) {
+    res.status(500).json({ error: "500 - Internal Server Error" });
+    return;
+  }
+
+  //give the user 5 points
+  try {
+    await UserProfile.updateOne({ username }, { $inc: { points: 5 } });
+
+    //and the event creator 5 points
+    await UserProfile.updateOne(
+      { username: event.author },
+      { $inc: { points: 5 } }
     );
   } catch (e) {
     res.status(500).json({ error: "500 - Internal Server Error" });

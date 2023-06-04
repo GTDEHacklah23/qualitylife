@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import { EventEntry } from "../../schema/Event";
 import { EventRoster } from "../../schema/EventRoster";
 import { UserEvents } from "../../schema/UserEvents";
+import { UserProfile } from "../../schema/UserProfile";
 
 const schema = Joi.object({
   image: Joi.string().required(),
@@ -107,6 +108,14 @@ export default handler(schema, async (req, res, parsed) => {
         },
       }
     );
+  } catch (err) {
+    res.status(500).json({ error: "500 - Internal Server Error" });
+    return;
+  }
+
+  //give the user 10 points
+  try {
+    await UserProfile.updateOne({ username }, { $inc: { points: 10 } });
   } catch (err) {
     res.status(500).json({ error: "500 - Internal Server Error" });
     return;
