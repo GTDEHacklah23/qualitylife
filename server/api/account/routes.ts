@@ -16,4 +16,7 @@ router.post("/delete", deleteHandler);
 import updateMetaHandler from "./updateMeta";
 router.post("/updateMeta", updateMetaHandler);
 
+import updateProfileHandler from "./updateProfile";
+router.post("/updateProfile", updateProfileHandler);
+
 export default router;
