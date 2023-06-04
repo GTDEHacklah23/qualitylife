@@ -21,7 +21,7 @@ Update account profile
 
   - a string
   - min 1 character
-  - max 40 characters
+  - max 12 characters
 
 ## Response
 
