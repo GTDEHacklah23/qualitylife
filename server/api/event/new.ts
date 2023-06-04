@@ -5,6 +5,7 @@ import { validTags } from "../../util/tags";
 import { v4 as uuidv4 } from "uuid";
 import { EventEntry } from "../../schema/Event";
 import { EventRoster } from "../../schema/EventRoster";
+import { UserEvents } from "../../schema/UserEvents";
 
 const schema = Joi.object({
   image: Joi.string().required(),
@@ -88,6 +89,24 @@ export default handler(schema, async (req, res, parsed) => {
 
   try {
     await newEventRoster.save();
+  } catch (err) {
+    res.status(500).json({ error: "500 - Internal Server Error" });
+    return;
+  }
+
+  //add the event to the user's created events
+  try {
+    await UserEvents.updateOne(
+      { username },
+      {
+        $push: {
+          created: {
+            id: newEvent.id,
+            time: Date.now(),
+          },
+        },
+      }
+    );
   } catch (err) {
     res.status(500).json({ error: "500 - Internal Server Error" });
     return;
