@@ -3,7 +3,8 @@ const path = require("path");
 module.exports = {
   entry: {
     login: "./web/src/pages/login.ts",
-  },
+    signup: "./web/src/pages/signup.ts" 
+      },
   module: {
     rules: [
       {
