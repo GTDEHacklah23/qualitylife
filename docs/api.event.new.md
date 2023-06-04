@@ -27,7 +27,7 @@ Create a new event
 
   - a string
   - min 1 character
-  - max 40 characters
+  - max 30 characters
 
 - `description` must be:
 
