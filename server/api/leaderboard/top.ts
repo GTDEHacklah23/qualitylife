@@ -29,16 +29,23 @@ async function getUsersByPoints(): Promise<SanitizedUser[]> {
 }
 
 let cachedLeaderboard: SanitizedUser[] | null = null;
-let lastFetched = 0;
+export let lastFetched = 0;
 
-export default handler(schema, async (req, res) => {
+export async function getLeaderboard(): Promise<SanitizedUser[]> {
   //has it been more than 5 minutes since we last fetched the leaderboard?
   const fiveMinutes = 5 * 60 * 1000;
   if (Date.now() - lastFetched > fiveMinutes) {
     //if so, fetch the leaderboard
+
     cachedLeaderboard = await getUsersByPoints();
     lastFetched = Date.now();
   }
+
+  return cachedLeaderboard!;
+}
+
+export default handler(schema, async (req, res) => {
+  getLeaderboard();
 
   //check if we have a username in the session
   const username = req.session!.username;
