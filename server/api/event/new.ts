@@ -113,9 +113,12 @@ export default handler(schema, async (req, res, parsed) => {
     return;
   }
 
-  //give the user 10 points
+  //give the user 10 points and event created stat
   try {
-    await UserProfile.updateOne({ username }, { $inc: { points: 10 } });
+    await UserProfile.updateOne(
+      { username },
+      { $inc: { points: 10, eventsHosted: 1 } }
+    );
   } catch (err) {
     res.status(500).json({ error: "500 - Internal Server Error" });
     return;
