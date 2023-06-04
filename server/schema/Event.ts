@@ -11,7 +11,7 @@ const EventSchema = new mongoose.Schema({
   zipCode: String,
   author: String,
   tags: [String],
-  attendees: [String],
+  attendees: Number,
 });
 
 export const Event = mongoose.model("Event", EventSchema, "Event");
