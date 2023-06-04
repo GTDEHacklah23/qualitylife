@@ -1,6 +1,6 @@
 # POST /api/event/join
 
-Update account metadata
+Join an event
 
 ## Parameters
 
