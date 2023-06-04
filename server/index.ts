@@ -18,3 +18,7 @@ app.get("/signup", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login.njk");
 });
+
+app.get("/newpost", (req, res) => {
+  res.render("newpost.njk");
+});

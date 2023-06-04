@@ -1,0 +1,220 @@
+.newpost {
+  width: 100%;
+  height: max(100%, 700px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #737c61;
+
+  .form-container {
+    top: calc((max(100vh, 700px) - 600px) / 2);
+    width: 775px;
+    height: 600px;
+    background-color: #f6efe8;
+    position: relative;
+    margin: auto;
+
+    h1 {
+      position: absolute;
+      width: 653.13px;
+      height: 64.8px;
+      left: calc(50% - 653.13px / 2 - 0.94px);
+      top: 23px;
+
+      font-family: "Josefin Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 60px;
+      text-align: center;
+      margin: 0;
+      color: #737c61;
+    }
+
+    #linedecor {
+      position: absolute;
+      width: 538.85px;
+      height: 0px;
+      left: calc(50% - 538.85px / 2 - 0.07px);
+      top: 88px;
+    }
+
+    label {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: #737c61;
+      position: absolute;
+    }
+
+    #title-label {
+      left: 33px;
+      top: 131px;
+    }
+
+    #description-label {
+      left: 33px;
+      top: 212px;
+    }
+
+    #tags-label {
+      left: 33px;
+      top: 438px;
+    }
+
+    #location-label {
+      left: 501px;
+      top: 242px;
+    }
+
+    #zipcode-label {
+      left: 501px;
+      top: 311px;
+    }
+
+    #start-label {
+      left: 501px;
+      top: 380px;
+    }
+
+    #date-label {
+      left: 641px;
+      top: 312px;
+    }
+
+    #end-label {
+      left: 641px;
+      top: 377px;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="date"],
+    input[type="time"] {
+      box-sizing: border-box;
+      mix-blend-mode: normal;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 6px;
+      outline: none;
+      background-color: #f6efe8;
+      position: absolute;
+    }
+
+    #title {
+      height: 23px;
+      left: 33px;
+      right: 310px;
+      top: 159px;
+    }
+
+    #description {
+      height: 188px;
+      left: 33px;
+      right: 310px;
+      top: 242px;
+    }
+
+    #location {
+      width: 243px;
+      height: 23px;
+      right: 31px;
+      top: 270px;
+    }
+
+    #zipcode {
+      width: 103px;
+      height: 23px;
+      right: 171px;
+      top: 340px;
+    }
+
+    #date {
+      width: 103px;
+      height: 23px;
+      right: 31px;
+      top: 340px;
+    }
+
+    #starttime {
+      width: 103px;
+      height: 23px;
+      right: 171px;
+      top: 407px;
+    }
+
+    #endtime {
+      width: 103px;
+      height: 23px;
+      right: 31px;
+      top: 405px;
+    }
+
+    .tagcontainer {
+      position: absolute;
+      width: 711px;
+      height: 27px;
+      left: 33px;
+      top: 467px;
+
+      div {
+        display: inline-block;
+        width: 150px;
+      }
+    }
+
+    button {
+      outline: none;
+      border: none;
+
+      width: 125px;
+      height: 39px;
+
+      border-radius: 6px;
+      position: absolute;
+      padding: 0px;
+
+      p {
+        width: 125px;
+        height: 20px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        align-items: center;
+        text-align: center;
+        margin: 0px;
+      }
+    }
+
+    #submit {
+      left: 33px;
+      top: 524px;
+      background: #737c61;
+      color: #ffffff;
+    }
+
+    #cancel {
+      left: 176px;
+      top: 524px;
+      background: #ccc2bd;
+      color: #000000;
+    }
+
+    #warningtext {
+      position: absolute;
+      top: 495px;
+      left: 33px;
+      margin: 0px;
+      font-family: "Josefin Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+      color: #ff0000;
+    }
+  }
+}

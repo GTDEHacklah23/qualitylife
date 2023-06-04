@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <script src="/asset/newpost.js"></script>
+    <link rel="stylesheet" href="/asset/bundle.css" />
+    <title>New Post</title>
+  </head>
+  <body>
+    <div class="newpost">
+      <div class="form-container">
+        <h1>New Post</h1>
+        <img id="linedecor" src="/asset/newpost-linedecor1.png" />
+        <p id="warningtext">This is warning text!</p>
+
+        <label id="title-label">Title</label>
+        <input id="title" type="text" />
+
+        <label id="description-label">Description</label>
+        <textarea id="description"></textarea>
+
+        <label id="location-label">Location</label>
+        <input id="location" type="text" />
+
+        <label id="zipcode-label">Zip Code</label>
+        <input id="zipcode" type="text" />
+
+        <label id="date-label">Date</label>
+        <input id="date" type="date" />
+
+        <label id="start-label">Start Time</label>
+        <input id="starttime" type="time" />
+
+        <label id="end-label">End Time</label>
+        <input id="endtime" type="time" />
+
+        <label id="tags-label">Tags</label>
+        <div class="tagcontainer">
+          <div>
+            <input id="tags" type="checkbox" name="tags" value="sub1" />
+            <label id="sub1-label">workshop</label>
+          </div>
+          <div>
+            <input id="tags" type="checkbox" name="tags" value="sub2" />
+            <label id="sub2-label">campaign</label>
+          </div>
+          <div>
+            <input id="tags" type="checkbox" name="tags" value="sub3" />
+            <label id="sub3-label">seminar</label>
+          </div>
+          <div>
+            <input id="tags" type="checkbox" name="tags" value="sub4" />
+            <label id="sub4-label">misc</label>
+          </div>
+        </div>
+
+        <button id="submit"><p>Submit</p></button>
+        <button id="cancel"><p>Cancel</p></button>
+      </div>
+    </div>
+  </body>
+</html>
