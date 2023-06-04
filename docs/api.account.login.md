@@ -1,4 +1,4 @@
-# POST /api/account/new
+# POST /api/account/login
 
 Login to an existing account
 
