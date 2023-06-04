@@ -14,4 +14,4 @@ const EventSchema = new mongoose.Schema({
   attendees: Number,
 });
 
-export const Event = mongoose.model("Event", EventSchema, "Event");
+export const EventEntry = mongoose.model("Event", EventSchema, "Event");
