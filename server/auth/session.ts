@@ -23,7 +23,6 @@ import MongoStore from "connect-mongo";
 const sessionStore = MongoStore.create({
   mongoUrl: process.env.MONGO_URL,
   mongoOptions: {},
-  dbName: "qualitylife",
   collectionName: "sessions",
   crypto: {
     secret: process.env.MONGO_SECRET || "SuperSecretMongoSecret",
