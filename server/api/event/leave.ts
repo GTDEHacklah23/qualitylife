@@ -4,6 +4,7 @@ import { EventEntry } from "../../schema/Event";
 import { EventRoster } from "../../schema/EventRoster";
 import { UserEvents } from "../../schema/UserEvents";
 import { UserProfile } from "../../schema/UserProfile";
+import { deltaToHours } from "../../util/deltaToHours";
 
 const schema = Joi.object({
   id: Joi.string().required(),
@@ -57,9 +58,15 @@ export default handler(schema, async (req, res, parsed) => {
     return;
   }
 
-  //remove 5 points from the user
+  //calculate the number of hours in the event
+  const hours = deltaToHours(event.startTimestamp!, event.endTimestamp!);
+
+  //remove stats from the user
   try {
-    await UserProfile.updateOne({ username }, { $inc: { points: -5 } });
+    await UserProfile.updateOne(
+      { username },
+      { $inc: { points: -5, eventsAttended: -1, totalHours: -hours } }
+    );
 
     //and the event creator 5 points
     await UserProfile.updateOne(

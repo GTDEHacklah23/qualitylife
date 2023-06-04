@@ -4,6 +4,7 @@ import { EventEntry } from "../../schema/Event";
 import { EventRoster } from "../../schema/EventRoster";
 import { UserEvents } from "../../schema/UserEvents";
 import { UserProfile } from "../../schema/UserProfile";
+import { deltaToHours } from "../../util/deltaToHours";
 
 const schema = Joi.object({
   id: Joi.string().required(),
@@ -51,9 +52,15 @@ export default handler(schema, async (req, res, parsed) => {
     return;
   }
 
-  //give the user 5 points
+  //calculate the number of hours in the event
+  const hours = deltaToHours(event.startTimestamp!, event.endTimestamp!);
+
+  //give the user 5 points and events joined
   try {
-    await UserProfile.updateOne({ username }, { $inc: { points: 5 } });
+    await UserProfile.updateOne(
+      { username },
+      { $inc: { points: 5, eventsAttended: 1, totalHours: hours } }
+    );
 
     //and the event creator 5 points
     await UserProfile.updateOne(
