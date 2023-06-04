@@ -20,6 +20,7 @@ app.use("/asset", express.static("./web/assets", { maxAge: cacheTime }));
 
 //body parser
 import bodyParser from "body-parser";
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //sessions
