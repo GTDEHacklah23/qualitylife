@@ -1,7 +1,10 @@
 const path = require("path");
 
 module.exports = {
-  entry: { signup: "./web/src/pages/signup.ts" },
+  entry: {
+    login: "./web/src/pages/login.ts",
+    signup: "./web/src/pages/signup.ts" 
+      },
   module: {
     rules: [
       {
