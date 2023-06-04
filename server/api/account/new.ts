@@ -5,6 +5,7 @@ import { saltshaker } from "../../auth/saltshaker";
 import { hashPassword } from "../../auth/hashPassword";
 import { lookup } from "zipcodes";
 import { UserMeta } from "../../schema/UserMeta";
+import { UserProfile } from "../../schema/UserProfile";
 
 //Yeah no way I'm writing that regex myself
 //https://stackoverflow.com/a/12155517
@@ -51,8 +52,6 @@ export default handler(schema, async (req, res, parsed) => {
     salt,
   });
 
-  await newUser.save();
-
   //create a new user meta
   const newUserMeta = new UserMeta({
     username,
@@ -62,7 +61,34 @@ export default handler(schema, async (req, res, parsed) => {
     zipCode,
   });
 
-  await newUserMeta.save();
+  //create a new user profile
+  const newUserProfile = new UserProfile({
+    username,
+    biography: "",
+    displayName: username,
+    badges: [],
+    points: 0,
+    eventsHosted: 0,
+    eventsAttended: 0,
+    totalHours: 0,
+  });
+
+  try {
+    await newUser.save();
+  } catch (err) {
+    res.status(500).json({ error: "500 - Internal Server Error" });
+    return;
+  }
+
+  //only save these if the user is successfully created
+
+  try {
+    await newUserMeta.save();
+    await newUserProfile.save();
+  } catch (err) {
+    res.status(500).json({ error: "500 - Internal Server Error" });
+    return;
+  }
 
   res.status(200).json({ username });
 });
