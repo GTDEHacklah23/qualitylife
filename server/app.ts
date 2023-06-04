@@ -18,6 +18,10 @@ const cacheTime = process.env.ENVIROMENT === "dev" ? 0 : oneWeek;
 
 app.use("/asset", express.static("./web/assets", { maxAge: cacheTime }));
 
+//body parser
+import bodyParser from "body-parser";
+app.use(bodyParser.json());
+
 //sessions
 import { sessionMiddleware } from "./auth/session";
 app.use(sessionMiddleware);
