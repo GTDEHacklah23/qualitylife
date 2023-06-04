@@ -4,7 +4,7 @@ import { UserProfile } from "../../schema/UserProfile";
 
 const schema = Joi.object({
   biography: Joi.string().required(),
-  displayName: Joi.string().min(1).max(40).required(),
+  displayName: Joi.string().min(1).max(12).required(),
 });
 
 export default handler(schema, async (req, res, parsed) => {

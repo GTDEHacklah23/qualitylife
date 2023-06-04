@@ -10,7 +10,7 @@ import { UserProfile } from "../../schema/UserProfile";
 
 const schema = Joi.object({
   image: Joi.string().required(),
-  name: Joi.string().min(1).max(40).required(),
+  name: Joi.string().min(1).max(30).required(),
   description: Joi.string().min(1).max(500).required(),
   startTimestamp: Joi.number().integer().required(),
   endTimestamp: Joi.number().integer().required(),
