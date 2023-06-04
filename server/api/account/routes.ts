@@ -19,4 +19,7 @@ router.post("/updateMeta", updateMetaHandler);
 import updateProfileHandler from "./updateProfile";
 router.post("/updateProfile", updateProfileHandler);
 
+import getUserEventsHandler from "./getUserEvents";
+router.get("/getUserEvents", getUserEventsHandler);
+
 export default router;

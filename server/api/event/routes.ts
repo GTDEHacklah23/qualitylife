@@ -13,4 +13,7 @@ router.post("/join", joinHandler);
 import leaveHandler from "./leave";
 router.post("/leave", leaveHandler);
 
+import getEventsHandler from "./getEvents";
+router.get("/getEvents", getEventsHandler);
+
 export default router;
