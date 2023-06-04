@@ -25,7 +25,8 @@ Create a new account
   - a string
   - min 8 characters
   - max 30 characters
-  - alphanumeric
+  - 2+ letters
+  - 2+ digits or symbols
 
 ## Response
 

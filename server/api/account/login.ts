@@ -5,7 +5,7 @@ import { hashPassword } from "../../auth/hashPassword";
 
 const schema = Joi.object({
   username: Joi.string().alphanum().min(3).max(30).required(),
-  password: Joi.string().alphanum().min(8).max(30).required(),
+  password: Joi.string().min(8).max(30).required(),
 });
 
 export default handler(schema, async (req, res, parsed) => {

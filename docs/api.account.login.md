@@ -25,7 +25,6 @@ Login to an existing account
   - a string
   - min 8 characters
   - max 30 characters
-  - alphanumeric
 
 ## Response
 
