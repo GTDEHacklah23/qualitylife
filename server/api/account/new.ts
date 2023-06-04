@@ -6,6 +6,7 @@ import { hashPassword } from "../../auth/hashPassword";
 import { lookup } from "zipcodes";
 import { UserMeta } from "../../schema/UserMeta";
 import { UserProfile } from "../../schema/UserProfile";
+import { UserEvents } from "../../schema/UserEvents";
 
 //Yeah no way I'm writing that regex myself
 //https://stackoverflow.com/a/12155517
@@ -73,6 +74,13 @@ export default handler(schema, async (req, res, parsed) => {
     totalHours: 0,
   });
 
+  //create new user events entry
+  const newUserEvents = new UserEvents({
+    username,
+    created: [],
+    joined: [],
+  });
+
   try {
     await newUser.save();
   } catch (err) {
@@ -85,6 +93,7 @@ export default handler(schema, async (req, res, parsed) => {
   try {
     await newUserMeta.save();
     await newUserProfile.save();
+    await newUserEvents.save();
   } catch (err) {
     res.status(500).json({ error: "500 - Internal Server Error" });
     return;
