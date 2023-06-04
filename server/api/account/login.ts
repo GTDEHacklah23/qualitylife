@@ -28,8 +28,7 @@ export default handler(schema, async (req, res, parsed) => {
     return;
   }
 
-  res.status(200).json({ username });
-
   //set the session
   req.session!.username = username;
+  res.status(200).json({ username });
 });
