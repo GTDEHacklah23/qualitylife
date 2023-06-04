@@ -65,11 +65,6 @@ whenReady(() => {
         showWarning("Invalid details");
       }
 
-      //or Invalid zip code, show warning
-      if (err.message === "Invalid zip code") {
-        showWarning("Invalid zip code");
-      }
-
       //Username already taken
       if (err.message === "Username already taken") {
         showWarning("Username already taken");

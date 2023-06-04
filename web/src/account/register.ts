@@ -1,6 +1,5 @@
 import axios from "axios";
 import Joi from "joi";
-import { lookup } from "zipcodes";
 
 export async function register(
   username: string,
@@ -32,16 +31,7 @@ export async function register(
   ) {
     throw new Error("Invalid details");
   }
-
-  //check if the zip code is valid
-  const zipInfo = lookup(zipCode);
-
-  if (!zipInfo) {
-    throw new Error("Invalid zip code");
-  }
-
-  //check if zip is valid
-
+  
   try {
     const response = await axios.post(
       "/api/account/new",
