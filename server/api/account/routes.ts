@@ -13,4 +13,7 @@ router.post("/logout", logoutHandler);
 import deleteHandler from "./delete";
 router.post("/delete", deleteHandler);
 
+import updateMetaHandler from "./updateMeta";
+router.post("/updateMeta", updateMetaHandler);
+
 export default router;
