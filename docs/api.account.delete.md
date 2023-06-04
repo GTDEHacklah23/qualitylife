@@ -17,7 +17,7 @@ Delete an existing account
 
   - a string
   - min 3 characters
-  - max 30 characters
+  - max 12 characters
   - alphanumeric
 
 - `password` must be:
