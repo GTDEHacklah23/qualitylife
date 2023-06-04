@@ -6,5 +6,5 @@ dist
 prod.env
 dev.env
 
-web/assets/bundle.css
-web/assets/bundle.js
+web/assets/*.css
+web/assets/*.js

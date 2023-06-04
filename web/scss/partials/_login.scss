@@ -33,6 +33,22 @@
       text-align: center;
     }
 
+    #warningtext {
+      position: absolute;
+      left: 27.89%;
+      right: 27.62%;
+      top: 175px;
+      margin: 0px;
+      font-family: "Josefin Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+      color: #ff0000;
+      display: none;
+    }
+
     #linedecor {
       position: absolute;
       left: 4.15%;
