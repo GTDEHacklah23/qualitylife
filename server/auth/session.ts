@@ -20,8 +20,6 @@ if (!process.env.MONGO_SECRET) {
 //database link
 import MongoStore from "connect-mongo";
 
-console.log("MONGO_URL", process.env.MONGO_URL);
-
 const sessionStore = MongoStore.create({
   mongoUrl: process.env.MONGO_URL,
   mongoOptions: {},
