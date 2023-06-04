@@ -10,4 +10,7 @@ router.post("/login", loginHandler);
 import logoutHandler from "./logout";
 router.post("/logout", logoutHandler);
 
+import deleteHandler from "./delete";
+router.post("/delete", deleteHandler);
+
 export default router;

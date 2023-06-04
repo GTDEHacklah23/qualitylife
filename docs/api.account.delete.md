@@ -1,6 +1,6 @@
-# POST /api/account/login
+# POST /api/account/delete
 
-Login to an existing account
+Delete an existing account
 
 ## Parameters
 
@@ -30,7 +30,7 @@ Login to an existing account
 
 ### 200 OK
 
-Login successful. Session cookie set.
+Delete successful.
 
 ```json
 {
