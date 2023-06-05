@@ -1,7 +1,7 @@
 <div class="eventPreview">
   <img class="eventimg" src="/asset/1.png" />
-  <a>Insane title - null null null null</a>
-  <p>username posted 12 mins ago</p>
-  <h3>696</h3>
+  <a href="/post?id={{ item.id }}">{{ item.name }}</a>
+  <p>created by {{ item.author }}</p>
+  <h3>{{ item.attendees }}</h3>
   <img class="check" src="/asset/check.png" />
 </div>
