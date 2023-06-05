@@ -22,3 +22,7 @@ app.get("/login", (req, res) => {
 app.get("/newpost", (req, res) => {
   res.render("newpost.njk");
 });
+
+app.get("/forum", (req, res) => {
+  res.render("forum.njk");
+});

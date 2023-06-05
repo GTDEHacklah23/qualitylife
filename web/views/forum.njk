@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="/asset/forum.js"></script>
+    <link rel="stylesheet" href="/asset/bundle.css" />
+    <title>Login</title>
+  </head>
+  <body class="forum">
+    <h1 class="title">Forum</h1>
+    <img id="linedecor" src="/asset/newpost-linedecor1.png" />
+    <div class="forum-entries">
+      <div>
+        <div class="sidebar">
+          <button id="newPost"><p>Create a Post!</p></button>
+          <br />
+          {% include "partials/forumSearch.njk" %}
+          <button id="search"><p>Search</p></button>
+        </div>
+        <div class="forum-entries-list">
+          {% include "partials/eventPreview.njk" %} <br />
+          {% include "partials/eventPreview.njk" %} <br />
+          {% include "partials/eventPreview.njk" %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

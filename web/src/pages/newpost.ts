@@ -74,7 +74,6 @@ whenReady(() => {
   });
 
   cancelButton.addEventListener("click", () => {
-    //TODO: redirect to forums page
-    window.location.href = "/";
+    window.location.href = "/forum";
   });
 });
