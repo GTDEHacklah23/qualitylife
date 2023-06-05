@@ -7,3 +7,20 @@
 @use "partials/forum";
 @use "partials/post";
 @use "partials/topbar";
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/asset/Inter/static/Inter-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Josefin_Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/asset/Josefin_Sans/static/Josefin_Sans-SemiBold.ttf")
+    format("truetype");
+}
