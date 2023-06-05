@@ -7,7 +7,7 @@ import "./util/connectdb";
 import apiRouter from "./api/routes";
 app.use("/api", apiRouter);
 
-app.get("/", (req, res) => {
+app.get("/in", (req, res) => {
   res.render("index.njk");
 });
 
@@ -17,4 +17,7 @@ app.get("/signup", (req, res) => {
 
 app.get("/login", (req, res) => {
   res.render("login.njk");
+});
+app.get("/", (req, res) => {
+  res.render("forumPst.njk");
 });

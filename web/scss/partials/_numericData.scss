@@ -1,0 +1,60 @@
+.NumericDataBox {
+  border: 3px solid #737c61;
+  width: 200px;
+  height: 350px;
+
+  h2,
+  h2::placeholder {
+    width: 414px;
+    height: 10.11px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #1c1e1d;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+  }
+  #TotPoints {
+    top: 20;
+  }
+  #TotHourSpent {
+    top: 100;
+  }
+  #TotEventsAttended {
+    top: 180;
+  }
+  #TotActivitiesHosted {
+    top: 260;
+  }
+  p,
+  p::placeholder {
+    width: 291px;
+    height: 10.11px;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #aec4af;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+  }
+  #numberTP {
+    top: 48;
+  }
+  #numberTHS {
+    top: 128;
+  }
+  #numberTEA {
+    top: 208;
+  }
+  #numberTAH {
+    top: 288;
+  }
+}
