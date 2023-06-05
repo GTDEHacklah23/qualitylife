@@ -38,5 +38,8 @@ export default async function handler(req: Request, res: Response) {
     }
   });
 
-  res.render("forum.njk", { events: events });
+  res.render("forum.njk", {
+    events: events,
+    user: req.session.username || "none",
+  });
 }

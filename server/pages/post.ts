@@ -58,5 +58,6 @@ export default async function handler(req: Request, res: Response) {
       startTime: startTimeString,
       endTime: finishTimeString,
     },
+    user: req.session.username || "none",
   });
 }
