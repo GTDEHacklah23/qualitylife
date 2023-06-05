@@ -5,6 +5,12 @@
     <title>Login</title>
   </head>
   <body>
+    {% if user != "none" %}
+    <script>
+      window.location.href = "/forum";
+    </script>
+    {% endif %}
+
     <div class="login">
       <div class="login-field-box">
         <h1>Login</h1>

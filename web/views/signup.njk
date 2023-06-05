@@ -5,6 +5,12 @@
     <title>Sign Up</title>
   </head>
   <body>
+    {% if user != "none" %}
+    <script>
+      window.location.href = "/forum";
+    </script>
+    {% endif %}
+
     <div class="signup">
       <div class="signup-field-box">
         <h1>Sign Up</h1>

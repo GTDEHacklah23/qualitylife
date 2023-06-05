@@ -23,9 +23,15 @@
             community service projects to create a greener, healthier future.
           </p>
         </div>
+        {% if user == "none" %}
         <button onclick="window.location.href='/signup'" class="login-button">
           <img src="/asset/signup-arrow.png" />
         </button>
+        {% else %}
+        <button onclick="window.location.href='/forum'" class="login-button">
+          <img src="/asset/signup-arrow.png" />
+        </button>
+        {% endif %}
       </div>
     </div>
   </body>
