@@ -23,7 +23,7 @@ whenReady(() => {
       localStorage.setItem("username", username);
 
       //redirect to home page
-      window.location.href = "/";
+      window.location.href = "/forum";
     } catch (err: any) {
       //if error is Invalid username or password, show warning
       if (err.message === "Invalid username or password") {

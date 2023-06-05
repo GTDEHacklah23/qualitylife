@@ -58,7 +58,7 @@ whenReady(() => {
         zipcode,
         tags
       );
-      //TODO: redirect to event page
+      window.location.href = "/post?id=" + eventid;
       console.log(eventid);
     } catch (error: any) {
       //401
