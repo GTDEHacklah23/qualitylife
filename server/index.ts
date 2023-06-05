@@ -16,4 +16,27 @@ app.get("/signup", (req, res) => {
 });
 app.get("/leaderboard", (req, res) => {
   res.render("leaderboard.njk");
+
+
+app.get("/login", (req, res) => {
+  res.render("login.njk");
+});
+
+app.get("/newpost", (req, res) => {
+  res.render("newpost.njk");
+});
+
+import forumHandler from "./pages/forum";
+app.get("/forum", forumHandler);
+
+import postHandler from "./pages/post";
+app.get("/post", postHandler);
+
+app.get("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.log(err);
+    }
+    res.redirect("/");
+  });
 });

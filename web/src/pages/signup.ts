@@ -58,16 +58,11 @@ whenReady(() => {
       localStorage.setItem("username", username);
 
       //redirect to home page
-      window.location.href = "/";
+      window.location.href = "/forum";
     } catch (err: any) {
       //if error is Invalid details, show warning
       if (err.message === "Invalid details") {
         showWarning("Invalid details");
-      }
-
-      //or Invalid zip code, show warning
-      if (err.message === "Invalid zip code") {
-        showWarning("Invalid zip code");
       }
 
       //Username already taken

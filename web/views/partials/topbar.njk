@@ -1,0 +1,11 @@
+<div class="topbar">
+  <h1>EcoConnect</h1>
+  <a id="forums-link" href="/forum">Forum</a>
+
+  {% if user == "none" %}
+  <a id="signup-link" href="/signup">Sign Up</a>
+  <a id="login-link" href="/login">Log In</a>
+  {% else %}
+  <a id="logout-link" href="/logout">Log Out</a>
+  {% endif %}
+</div>

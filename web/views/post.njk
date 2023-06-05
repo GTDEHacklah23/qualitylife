@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script src="/asset/post.js"></script>
+    <link rel="stylesheet" href="/asset/bundle.css" />
+    <title>Post</title>
+  </head>
+  <body class="post">
+    {% include "partials/topbar.njk" %}
+    <div class="post-container">
+      <button id="return">
+        <p>Go Back</p>
+      </button>
+
+      <div class="post-body">
+        <div class="top">
+          <img class="profileimg" src="/asset/1.png" />
+          <p>Posted by {{ event.author }}</p>
+          <h1>{{ event.name }}</h1>
+
+          <div class="description">
+            <p>{{ event.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="infobox">
+        <div>
+          <p>{{ data.date }}</p>
+          <p>{{ data.startTime }} to {{ data.endTime }}</p>
+          <p>At {{ event.location }}</p>
+          <p>{{ event.zipCode }}</p>
+          <p>{{ event.attendees }} Attending</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

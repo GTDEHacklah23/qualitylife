@@ -1,0 +1,79 @@
+.topbar {
+  width: 100%;
+  height: 86px;
+  background: #737c61;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  h1 {
+    position: absolute;
+    width: 209px;
+    height: 31px;
+    left: 0px;
+    top: 6px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #ccc2bd;
+    margin: 0;
+  }
+
+  a {
+    color: white;
+  }
+
+  #forums-link {
+    position: absolute;
+    width: 99px;
+    height: 20px;
+    left: 232px;
+    top: 12px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    color: #ccc2bd;
+    margin: 0;
+  }
+
+  #login-link,
+  #logout-link {
+    position: absolute;
+    width: 88px;
+    height: 20px;
+    right: 12px;
+    top: 6px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  #signup-link {
+    position: absolute;
+    width: 77px;
+    height: 20px;
+    right: 107px;
+    top: 6px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
