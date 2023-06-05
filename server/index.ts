@@ -26,3 +26,7 @@ app.get("/newpost", (req, res) => {
 app.get("/forum", (req, res) => {
   res.render("forum.njk");
 });
+
+app.get("/post", (req, res) => {
+  res.render("post.njk");
+});

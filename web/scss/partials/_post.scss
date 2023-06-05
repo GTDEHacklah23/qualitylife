@@ -1,0 +1,160 @@
+.post-container {
+  width: 1100px;
+  height: calc(100vh - 86px);
+  background-color: #f6efe8;
+  position: relative;
+  margin: auto;
+
+  button {
+    position: absolute;
+    width: 99px;
+    height: 30px;
+    left: 20px;
+    top: 10px;
+    border: none;
+    outline: none;
+
+    background: rgba(219, 196, 161, 0.26);
+    border-radius: 6px;
+
+    p {
+      top: calc(50% - 7.5px);
+      left: 0;
+      width: 100%;
+      height: 20px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      margin: 0;
+
+      color: #737c61;
+    }
+  }
+
+  .post-body {
+    position: absolute;
+    left: 20px;
+    top: 80px;
+    width: 696px;
+    height: 480px;
+    background: rgba(219, 196, 161, 0.26);
+    border-radius: 6px;
+    display: inline-block;
+
+    .top {
+      width: 100%;
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 50px;
+        top: 8px;
+        border-radius: 15px;
+      }
+
+      p {
+        position: absolute;
+        width: 510px;
+        height: 20px;
+        left: 80px;
+        top: 15px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0;
+
+        color: #737c61;
+      }
+      h1 {
+        position: absolute;
+        width: 604px;
+        height: 66px;
+        left: 48px;
+        top: 46px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 48px;
+        margin: 0;
+
+        color: #737c61;
+      }
+
+      .description {
+        position: absolute;
+        width: 630px;
+        height: 350px;
+        left: 50px;
+        top: 120px;
+
+        background: rgba(219, 196, 161, 0.32);
+        border-radius: 16px;
+        margin: 0;
+
+        p {
+          position: absolute;
+          width: 610px;
+          height: 300px;
+          left: 15px;
+          top: 0px;
+
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+
+          color: #737c61;
+        }
+      }
+    }
+  }
+
+  .infobox {
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    width: 350px;
+    height: 250px;
+    background: rgba(219, 196, 161, 0.56);
+    border-radius: 6px;
+    display: inline-block;
+
+    div {
+      position: relative;
+      width: 320px;
+      height: 230px;
+      left: 15px;
+      top: 10px;
+
+      p {
+        display: block;
+        width: 350px;
+        height: 25px;
+        left: 12px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+
+        color: #737c61;
+      }
+    }
+  }
+}
+
+.post {
+  background-color: #f6efe8;
+}
