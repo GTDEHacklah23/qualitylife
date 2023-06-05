@@ -106,7 +106,7 @@ body {
   border-radius: 13px;
   display: flex;
   height: 118px;
-  justify-content: flex-end;
+  justify-content: space-between;
   min-width: 666px;
   padding: 0 0px;
   border-top: 10px;
@@ -242,6 +242,8 @@ body {
   font-size: var(--font-size-1);
   font-weight: 400;
   font-style: italic;
+  margin: 0;
+  width: 150px;
 }
 .josefinsans-normal-limed-ash-14px {
   color: var(--some-green);
