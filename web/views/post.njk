@@ -13,22 +13,22 @@
       <div class="post-body">
         <div class="top">
           <img class="profileimg" src="/asset/1.png" />
-          <p>Posted by username - xx hours ago</p>
-          <h1>Title - nullnullnullnullnullnull</h1>
+          <p>Posted by {{ event.author }} - {{ data.timediff }} ago</p>
+          <h1>{{ event.name }}</h1>
 
           <div class="description">
-            <p>Description here</p>
+            <p>{{ event.description }}</p>
           </div>
         </div>
       </div>
 
       <div class="infobox">
         <div>
-          <p>04/23/2024</p>
-          <p>12:30 AM to 5:30 PM</p>
-          <p>At Location</p>
-          <p>30341</p>
-          <p>127 Attending</p>
+          <p>{{ data.date }}</p>
+          <p>{{ data.startTime }} to {{ data.endTime }}</p>
+          <p>At {{ event.location }}</p>
+          <p>{{ event.zipCode }}</p>
+          <p>{{ event.attendees }} Attending</p>
         </div>
       </div>
     </div>
