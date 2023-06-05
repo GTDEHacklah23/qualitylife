@@ -46,6 +46,24 @@
     margin: 0;
   }
 
+  #leaderboard-link {
+    position: absolute;
+    width: 99px;
+    height: 20px;
+    left: 350px;
+    top: 12px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    color: #ccc2bd;
+    margin: 0;
+  }
+
   #login-link,
   #logout-link {
     position: absolute;
