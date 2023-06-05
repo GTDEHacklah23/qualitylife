@@ -6,6 +6,7 @@ module.exports = {
     signup: "./web/src/pages/signup.ts",
     newpost: "./web/src/pages/newpost.ts",
     forum: "./web/src/pages/forum.ts",
+    post: "./web/src/pages/post.ts",
   },
   module: {
     rules: [
