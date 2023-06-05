@@ -22,3 +22,6 @@ app.get("/login", (req, res) => {
 app.get("/newpost", (req, res) => {
   res.render("newpost.njk");
 });
+app.get("/profile", (req, res) => {
+  res.render("profile.njk");
+});
