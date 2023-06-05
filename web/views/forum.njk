@@ -16,9 +16,9 @@
           <button id="search"><p>Search</p></button>
         </div>
         <div class="forum-entries-list">
-          {% include "partials/eventPreview.njk" %} <br />
-          {% include "partials/eventPreview.njk" %} <br />
-          {% include "partials/eventPreview.njk" %}
+          {% for item in events %} {% include "partials/eventPreview.njk" %}
+          <br />
+          {%endfor %}
         </div>
       </div>
     </div>

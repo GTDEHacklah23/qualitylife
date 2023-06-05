@@ -23,9 +23,8 @@ app.get("/newpost", (req, res) => {
   res.render("newpost.njk");
 });
 
-app.get("/forum", (req, res) => {
-  res.render("forum.njk");
-});
+import forumHandler from "./pages/forum";
+app.get("/forum", forumHandler);
 
 import postHandler from "./pages/post";
 app.get("/post", postHandler);
