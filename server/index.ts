@@ -14,3 +14,6 @@ app.get("/", (req, res) => {
 app.get("/signup", (req, res) => {
   res.render("signup.njk");
 });
+app.get("/leaderboard", (req, res) => {
+  res.render("leaderboard.njk");
+});
